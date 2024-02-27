@@ -24,3 +24,14 @@ logging:
           InstanceMetadataServiceResourceFetcher: error
         util:
           EC2MetadataUtils: error
+
+spring:
+  data:
+    show-sql: true
+    mongodb:
+      database: payment-history
+      port: 27017
+      host: localhost
+      password: history-pwd
+      username: historydb-user
+
