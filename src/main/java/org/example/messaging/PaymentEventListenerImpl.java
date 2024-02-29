@@ -24,6 +24,7 @@ public class PaymentEventListenerImpl implements PaymentEventListener {
                     .registerModule(new JavaTimeModule())
                     .readValue(message, PaymentResource.class);
             historyService.savePayment(paymentResource);
+            log.info("Message received successfully");
         } catch (Exception e) {
             log.error("Failed to parse message: {}", message, e);
         }
